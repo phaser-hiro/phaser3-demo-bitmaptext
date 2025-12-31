@@ -38,10 +38,6 @@ export default class Game extends Phaser.Scene {
     }
 
     create() {
-
-        // デバッグ用
-        //this.debugFunc();
-
         const msgText = this.add.text(60, 40, 'ボタンをクリックしてください', { ...textStyle, color: '#FFFFFF', backgroundColor: undefined });
 
         this.btnText = new Array<Phaser.GameObjects.Text>();
@@ -100,26 +96,6 @@ export default class Game extends Phaser.Scene {
         this.btnReset.setVisible(true);
         this.children.bringToTop(this.btnReset);
     }
-
-    /*
-    private debugFunc() {
-        const wconfig: Phaser.Types.GameObjects.BitmapText.WavingMotionConfig = {
-            speed: 8,       // スピードを1～50くらいで指定。値が大きいほど速い。
-            angleStepX: 30, // 文字間の周期差(X)。-180～180の範囲で指定。
-            angleStepY: 30, // 文字間の周期差(Y)。-180～180の範囲で指定。
-            radiusX: 20,    // 横のふり幅
-            radiusY: 15     // 縦のふり幅
-        }
-        const waving = this.add.DBTWavingMotion(0, 0, 'canfont', 'ABCDEFG', wconfig);
-
-        const sconfig: Phaser.Types.GameObjects.BitmapText.ScalingMotionConfig = {
-            speed: 10,      // スピードを1～50くらいで指定。値が大きいほど速い。
-            minScale: 0.8,  // スケールの最小値
-            maxScale: 1.0,  // スケールの最大値
-            angleStep: -30  // 文字間の周期差。-180～180の範囲で指定。
-        }
-        const scaling = this.add.DBTScalingMotion(0, 100, 'rockdigits', '012345', sconfig);
-    }*/
 
     /**
      * ビットマップフォント（レトロフォント）
